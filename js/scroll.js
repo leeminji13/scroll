@@ -44,16 +44,16 @@ function move_slider(amount){
     
 }
  
-function li_upDown(amount){
-    li_pos += amount;
-    for(let i=0; i<s_li.length; i++){
-        if(i%2 != 0){
-            s_li[i].style.transform = `translateY(${li_pos / (i*5)}px)`;
-        }else{
-            s_li[i].style.transform = `translateY(${-li_pos / (i*5)}px)`;
-        }
-    }
-}
+// function li_upDown(amount){
+//     li_pos += amount;
+//     for(let i=0; i<s_li.length; i++){
+//         if(i%2 != 0){
+//             s_li[i].style.transform = `translateY(${li_pos / (i*5)}px)`;
+//         }else{
+//             s_li[i].style.transform = `translateY(${-li_pos / (i*5)}px)`;
+//         }
+//     }
+// }
  
 function on_indicator(){
     pct = s_pos * 100 / s_move_max;
