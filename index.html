@@ -13,13 +13,23 @@
         <div class="wrap">
             <div id="box1" class="box box1">
                 <div class="event">
-                    <form id="formMobile" name="formMobile" method="post" action="https://script.google.com/macros/s/AKfycbyqAPljk50Kqr0ezzlY7NooB8oxTmItTVwU6FclfbdwnbzPmnVsJl6nJcebwazL3i5M/exec" target="frAttachFiles">
+                    <form id="formMobile" name="formMobile" method="post" onsubmit="return allCheck()"
+                    action="https://script.google.com/macros/s/AKfycbyqAPljk50Kqr0ezzlY7NooB8oxTmItTVwU6FclfbdwnbzPmnVsJl6nJcebwazL3i5M/exec" target="frAttachFiles">
                         <input type="hidden" id="apt_seq" name="apt_seq" value="116" />
                         <input type="hidden" id="call_seq" name="call_seq" value="31675" />
                         <input type="hidden" id="crm_seq" name="crm_seq" value="1171" />
                         <input class="input" name="cname" id="cname" type="text" placeholder="이름 입력" required>
-                        <input class="input" name="cphone" id="cphone" type="tel" placeholder="휴대폰 번호 입력(- 제외)" required>
-                        <input id="email" type="text" name="email" placeholder="ex)abc@naver.com" required>
+                        <div class="phone">
+                            <input class="input" name="cphone" id="cphone" type="tel" placeholder="휴대폰 번호 입력(- 제외)" required>
+                            <input type="button" value="확인" onclick="check();">
+                            <p id="pmessage"></p>
+                        </div>
+                        <div class="email">
+                            <input id="email" type="email" name="email" placeholder="ex)abc@naver.com" required>
+                            <input type="button" value="확인" onclick="echeck();">
+                            <p class="message"></p>
+                        </div>
+                        
                         <p class="txt tc ev">※ 전화상담 예약자 본인의 연락처를 작성해주세요.</p>
                         <div class="agree">
                             <span class="check">
@@ -29,8 +39,8 @@
                             </span>
                             <button type="button" class="btPop">약관보기</button>
                         </div>
-                         <iframe name="frAttachFiles" style="display:none"></iframe>
-                         <input type="submit" class="black_btn shadow" ></input>
+                        <iframe name="frAttachFiles" style="display:none"></iframe>
+                        <input id="submit" type="submit" class="black_btn shadow"></input>
                     </form>
                 </div>
             </div>

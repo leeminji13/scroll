@@ -1,47 +1,29 @@
-function validate() {
-    var re = /^[a-zA-Z0-9]{4,12}$/ // 아이디와 패스워드가 적합한지 검사할 정규식
-    var re2 = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
-    // 이메일이 적합한지 검사할 정규식
-
-    // var id = document.getElementById("id");
-    // var pw = document.getElementById("pw");
-    var email = document.getElementById("email");
-    var num1 = document.getElementById("cphone");
-    // var num2 = document.getElementById("num2");
- 
-    // var arrNum1 = new Array(); // 주민번호 앞자리숫자 6개를 담을 배열
-    // var arrNum2 = new Array(); // 주민번호 뒷자리숫자 7개를 담을 배열
-
-    // ------------ 이메일 까지 -----------
-
-    // if(!check(re,id,"아이디는 4~12자의 영문 대소문자와 숫자로만 입력")) {
-    //     return false;
-    // }
-
-    // if(!check(re,pw,"패스워드는 4~12자의 영문 대소문자와 숫자로만 입력")) {
-    //     return false;
-    // }
-
-    // if(join.pw.value != join.checkpw.value) {
-    //     alert("비밀번호가 다릅니다. 다시 확인해 주세요.");
-    //     join.checkpw.value = "";
-    //     join.checkpw.focus();
-    //     return false;
-    // }
-
-    if(email.value=="") {
-        alert("이메일을 입력해 주세요");
-        email.focus();
-        return false;
-    }
-
-    if(!check(re2, email, "적합하지 않은 이메일 형식입니다.")) {
-        return false;
-    }
-
-    if(join.name.value=="") {
-        alert("이름을 입력해 주세요");
-        join.name.focus();
-        return false;
-    }
+// document.getElementById("submit").onclick = function(){
+//     submit()
+// }
+// function submit(){
+//     alert('정상적으로 제출되었습니다.')
+// }
+function check(){
+    var phone = document.getElementById( "cphone" ).value;
+    var num = /^010[0-9]{4}[0-9]{4}$/;
+    if ( num.test(phone) == false ) {
+        alert("번호형식이 올바르지 않습니다.");
+      } else {
+        alert("올바른 번호 형식입니다.");
+      }
 }
+function echeck(){
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // alert(document.getElementById("email").value);
+    var email = document.getElementById( "email" ).value;
+    if (re.test(email) == false) {
+        alert("메일형식이 올바르지 않습니다.");
+      }else{
+        alert("올바른 메일 형식입니다.");
+      }
+}
+function allCheck(){
+    alert("제출이 완료되었습니다.")
+}
+
