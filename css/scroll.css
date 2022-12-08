@@ -51,3 +51,9 @@ body {
 .container .box5 {
   background-color: rgb(253, 154, 25);
 }/*# sourceMappingURL=scroll.css.map */
+
+#box1 .event{display: flex; align-items: center; justify-content: center;}
+#formMobile{margin-top: 2rem;}
+#formMobile input{border: 0;width: 250px;height: 80px;padding: 0 1rem;}
+#formMobile .phone .ipBtn{background-color: white;border: 0;width: 50px;}
+#formMobile .agree .check #ag{width: 15px; height: 15px;}

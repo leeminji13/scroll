@@ -21,12 +21,12 @@
                         <input class="input" name="cname" id="cname" type="text" placeholder="이름 입력" required>
                         <div class="phone">
                             <input class="input" name="cphone" id="cphone" type="tel" placeholder="휴대폰 번호 입력(- 제외)" required>
-                            <input type="button" value="확인" onclick="check();">
+                            <input class="ipBtn" type="button" value="확인" onclick="check();">
                             <p id="pmessage"></p>
                         </div>
                         <div class="email">
                             <input id="email" type="email" name="email" placeholder="ex)abc@naver.com" required>
-                            <input type="button" value="확인" onclick="echeck();">
+                            <input class="ipBtn" type="button" value="확인" onclick="echeck();">
                             <p class="message"></p>
                         </div>
                         
@@ -34,7 +34,6 @@
                         <div class="agree">
                             <span class="check">
                                 <input type="checkbox" id="ag" name="ag">
-                                <span></span>
                                 <label for="ag">개인정보 수집 및 이용 동의(필수)</label>
                             </span>
                             <button type="button" class="btPop">약관보기</button>
